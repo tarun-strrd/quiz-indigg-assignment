@@ -112,7 +112,9 @@ const Question = () => {
     <div className="wrapper">
       <div className="question-container">
         {displayTimer && <Timer timeUp={timeUp} />}
+
         <div className="question">{questions[currentQuestion].question}</div>
+
         <div className={`options ${answered && "non-clickable"}`}>
           {questions[currentQuestion].options.map((option) => {
             return (

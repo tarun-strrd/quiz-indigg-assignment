@@ -4,6 +4,7 @@ const ViewResults = ({ finalScore, totalScore, retake, stats }) => {
   const finalPercent = Math.round((finalScore / totalScore) * 100);
   const [finalColor, setFinalColor] = useState("gray");
   const [feedBack, setFeedBack] = useState("");
+
   useEffect(() => {
     if (finalPercent >= 75) {
       setFeedBack("Excellent Work! Any way this is a dummy quiz.");
@@ -19,6 +20,7 @@ const ViewResults = ({ finalScore, totalScore, retake, stats }) => {
       setFinalColor("red");
     }
   }, []);
+
   return (
     <div className="wrapper">
       <h1 style={{ fontStyle: "sans-serif" }}>Results are here...</h1>
